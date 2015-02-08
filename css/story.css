@@ -1,0 +1,187 @@
+
+.body-container-home {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+}
+
+.story .row {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.story .row div {
+    position: relative;
+    padding:0;
+    z-index: 500;
+    width: 100%;
+    color: #eee;
+    text-align: center;
+    text-shadow: 0 0 30px rgb(17, 17, 17);
+}
+.story h1 {
+    margin:0;
+    width: 100%;
+    font-family: 'Alegreya SC', serif;
+    font-size: 73px;
+    line-height: 1.20em;
+    text-transform: uppercase;
+}
+.story .row {
+    height: 750px;
+}
+.story .row:nth-child(1) {
+    height: 840px;
+    background-image: url(../img/home/mount-fuji-star-night.png);
+}
+.story .row:nth-child(2) {
+    background-image: url(../img/home/ferrari-458-italia-london.jpg);
+}
+.story .row:nth-child(3) {
+    background-image: url(../img/home/lightbulbs_big_idea.jpg);
+}
+.story .row:nth-child(4) {
+    background-image: url(../img/home/google-deepmind-artificial-intelligence.jpg);
+}
+.story .row:nth-child(5) {
+    background-image: url(../img/home/nexus-6.jpg);
+}
+.story .row:nth-child(6) {
+    background-image: url(../img/home/wind-farm-sunset.jpg);
+}
+.story .row:nth-child(7) {
+    background-image: url(../img/home/lol-s4-championship.jpg);
+}
+.story .row:nth-child(8) {
+    background-image: url(../img/home/butterfly_flower_splash.jpg);
+}
+.story .row:nth-child(9) {
+    background-image: url(../img/home/space-shuttle-atlantis_launches_from_ksc-on-sts-132.jpg);
+}
+.story .row:nth-child(10) {
+    background-image: url(../img/home/endless-wooden-bridge.jpg);
+}
+.story .row:nth-child(1) div {  /* Mt Fuji */
+    top: 120px;
+}
+.story .row:nth-child(2) div {  /* Ferrari */
+    top: 100px;
+    left: 8%;
+    width: 85%;
+    color: #f0ff00;
+
+}
+.story .row:nth-child(3) div {  /* Idea */
+    top: 180px;
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+
+}
+.story .row:nth-child(4) div {  /* Deepmind */
+    top: 530px;
+    left: 0%;
+    width: 520px;
+    color: #ffffff;
+
+}
+.story .row:nth-child(5) div {  /* Nexus 6  */
+    float: right;
+    top: 445px;
+    right: 5%;
+    margin-right: 10px;
+    width: 470px;
+    color: #00fff8;
+}
+.story .row:nth-child(6) div {  /* Energy   */
+    top: 325px;
+    width: 90%;
+    /*left: 0%;*/
+    padding-right: 25px;
+    color: #b2ed12;
+}
+.story .row:nth-child(7) div {  /* LoL */
+    top: 272px;
+    left: 4%;
+    padding-right: 25px;
+    width: 500px;
+    color: #4ded6a;
+}
+.story .row:nth-child(8) div {  /* Creativity  */
+    top: 520px;
+    width: 80%;
+    left: 5%;
+    color: #070f2d;
+}
+.story .row:nth-child(9) div {  /* Boundaries  */
+    top: 160px;
+    left: 35%;
+    width: 60%;
+    text-align: center;
+    color: #ffffff;
+}
+
+.story .row:nth-child(10) div {  /* Abstract */
+    top: 230px;
+    width: 100%;
+}
+
+/* ========== Responsive =============== */
+
+@media screen and (max-width: 600px) {
+    .story .row h1 {
+        font-size: 50px;
+    }
+    .story .row:nth-child(2) div {
+        left: 0;
+    }
+}
+@media screen and (max-width: 899px) {
+    .story .row h1 {
+        font-size: 70px;
+    }
+    .story .row:nth-child(2) div {
+        top:  50px;
+    }
+    .story .row:nth-child(3) div {
+        top:  100px;
+    }
+    .story .row:nth-child(4) div {
+        top:  550px;
+    }
+    .story .row:nth-child(5) div {
+        top:  345px;
+    }
+    .story .row:nth-child(6) div {
+        top:  238px;
+    }
+    .story .row:nth-child(7) div {
+        top:  208px;
+    }
+    .story .row:nth-child(8) div {
+        top:  385px;
+    }
+    .story .row:nth-child(9) div {
+        top:  485px;
+        left: 10%;
+    }
+
+    .story .row:nth-child(10) div {
+        top: 150px;
+    }
+
+}
+
+@media screen and (min-width: 900px) {
+    .story .row {
+        height: 950px;
+    }
+    .story .row:nth-child(4) div {
+        margin-left:  10px;
+    }
+}
+@media screen and (min-width: 1100px) {
+    .story .row:nth-child(5) div {
+        right: 10%;
+    }
+}

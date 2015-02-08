@@ -1,0 +1,561 @@
+/* =================== Browser resets (modified) ====================
+// http://meyerweb.com/eric/tools/css/reset/ | v2.0 20110126 | public domain
+//
+// normalize.css v3.0.2 | MIT License | git.io/normalize */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    text-decoration: none;
+    vertical-align: baseline;
+}
+html {
+    font-family: Lato, Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    box-sizing: border-box;
+    background: #0d203a;
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%; /* Prevent iOS text size adjust after orientation  */
+    -ms-text-size-adjust: 100%; /* ...change without disabling user zoom.  */
+}
+body {
+    margin: 0; /* remove default margin */
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+ol, ul {
+    list-style: none;
+    margin-bottom: 1em;
+}
+.bullet {
+    list-style-type: disc;
+    padding-left: 25px;
+}
+blockquote, q {
+    quotes: none;
+}
+/*blockquote:before, blockquote:after,*/
+/*q:before, q:after {*/
+    /*content: '';*/
+    /*content: none;*/
+/*}*/
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin: .67em 0;
+}
+h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: .83em 0;
+}
+h3 {
+    /*font-size: 1.17em; Normalize default*/
+    font-size: 1.25em;
+    font-weight: bold;
+    margin: 1em 0;
+}
+h4 {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 1.33em 0;
+}
+
+h5 {
+    font-size: 0.83em;
+    font-weight: bold;
+    margin: 1.67em 0;
+}
+
+h6 {
+    font-size: 0.67em;
+    font-weight: bold;
+    margin: 2.33em 0;
+}
+p {
+    line-height: 1.40;
+    margin-bottom: 1em;
+}
+i, em {
+    font-style: italic;
+}
+b, strong {
+    font-weight: bold;
+}
+
+sub, sup { /* Prevent `sub` and `sup` affecting `line-height` in all browsers. */
+    font-size: 50%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+sup {
+    top: -0.65em;
+}
+sub {
+    bottom: -0.25em;
+}
+::-moz-selection {
+    color: #fff;
+    background: #c11e72;
+    text-shadow: none;
+}
+::selection {
+    color: #fff;
+    background: #c11e72;
+    text-shadow: none;
+}
+
+/* =================== Grid layout and position ============================ */
+.row {
+    display: block;
+    margin: 0 auto;
+    min-width: 440px;
+    max-width: 100%;
+    overflow: hidden;
+}
+.row:before, .row:after {
+    content: "";
+    display: table;
+}
+.column {
+    display: block;
+    float: left;
+}
+
+.zero  {width: 0;}
+.one   {width: 10%;}
+.two   {width: 20%;}
+.three {width: 30%;}
+.four  {width: 40%;}
+.five  {width: 50%;}
+.six   {width: 60%;}
+.seven {width: 70%;}
+.eight {width: 80%;}
+.nine  {width: 90%;}
+.ten   {width: 100%;}
+
+.center {
+    display:block;
+    margin: 0 auto;
+}
+.center-header {
+    margin: 0 auto;
+    padding-left: 14px;
+    max-width: 800px;
+}
+.center-text {
+    text-align: center;
+}
+.left {
+    padding-right: 10px;
+    float: left;
+}
+.right {
+    padding-left: 10px;
+    float: right;
+}
+.pad-right-10 {
+    padding-right: 35px;
+}
+
+/* =========================== Colors ====================================== */
+
+.green {background: #8cbf88}
+.purple {background: #6b4ad7;}
+.orange {background: #e19942;}
+.red {background: #b44e07;}
+.blue {background: #217ec8;}
+.transparent {background: transparent;}
+
+/* =========================== Header ====================================== */
+
+header {
+    position: fixed;
+    height: 40px;
+    width: 100%;
+    background: rgba(13, 32, 58, 0.95);
+    z-index: 900;
+    white-space: nowrap;
+    -webkit-box-shadow: 0 5px 8px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0 5px 8px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.25);
+}
+.header-home {
+    background: rgba(13, 32, 58, 0.50);
+}
+.nav-title {
+    text-transform: uppercase;
+    margin: 7px 0 0 0;
+    font-weight: normal;
+}
+nav {
+    list-style: none;
+}
+nav ul {
+    float: right;
+    padding-right: 16px;
+}
+nav ul li {
+    float: none;
+    display: inline-block;
+    margin-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 3px;
+}
+header a:link, header a:visited {
+    padding: 4px 0;
+    color: #eeeeee;
+    opacity: 1;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+header a:hover, header .active a {
+    color: #9eff9e;
+}
+
+/* Sliding underline src: http://bradsknutson.com/blog/css-sliding-underline/ */
+.sliding-middle-out {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 2px;
+}
+.sliding-middle-out:after {
+    content: '';
+    display: block;
+    margin: 2px auto;
+    height: 1px;
+    width: 0;
+    background: transparent;
+    transition: width .4s ease, background-color .4s ease;
+}
+.sliding-middle-out:hover:after {
+    width: 100%;
+    background: #95ff95;
+}
+
+/* ========================== Blog, et all ============================== */
+
+.body-container {
+    position: relative;
+    z-index: 500;
+    min-height: 558px;
+    width: 100%;
+    background: -webkit-linear-gradient(#8cbf88, #14517f); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#8cbf88, #14517f); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#8cbf88, #14517f); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#8cbf88, #14517f); /* Standard syntax */
+}
+article {
+    overflow:hidden;
+    margin: 50px auto 0 auto;
+    max-width: 724px;
+    padding: 5px 35px 35px 35px;
+    background: #f6f6f6;
+}
+.body-container .row:first-of-type article {
+    margin-top: 80px;
+}
+.body-container .row:last-of-type article {
+    margin-bottom: 50px;
+}
+article img {
+    width: 100%;
+}
+article h2, article h3 {
+    font-family: 'Roboto Slab', serif;
+}
+article h3 {
+    margin-bottom: 0.5em;
+}
+article a:link, article a:visited {
+    color: #c2215b;
+    cursor: auto;
+}
+article h2 a:link, article h2 a:visited {
+    color: black;
+    cursor: auto;
+}
+article h6 a:link, article h6 a:visited {
+    color: #999999;
+    cursor: auto;
+}
+article a:hover, article a:link:active, article a:visited:active,
+article h2 a:hover, article h2 a:link:active, article h2 a:visited:active,
+article h6 a:hover, article h6 a:link:active, article h6 a:visited:active{
+    color: #ff2b68;
+    text-decoration: underline;
+}
+.article-title {
+    padding: 5px 0 15px 0;
+}
+.publish-date {
+    color: #999999;
+    font-weight: normal;
+    text-align: right;
+    margin: 0;
+}
+.anchor, .anchor a:link {
+    padding-top: 105px;
+    color: black;
+}
+
+/* ===================== Bootstrap pagination modified ================== */
+.pagination {
+    height: 36px;
+    margin: 18px 0;
+    text-align: center;
+}
+.pagination ul {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;     /* IE7 inline-block hack */
+    margin-left: 0;
+    margin-bottom: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.pagination li {
+    display: inline;
+}
+.pagination a {
+    float: left;
+    padding: 0 13px;
+    line-height: 30px;
+    text-decoration: none;
+    border: 1px solid #eee;
+    border-left-width: 0;
+}
+.pagination a:link, .pagination a:visited {
+    background: #14517f;
+    color: #eee;
+    cursor: auto;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.pagination a:hover,
+.pagination .active a {
+    color: #14517f;
+    background: #eee;
+}
+.pagination .disabled span,
+.pagination .disabled a,
+.pagination .disabled a:hover {
+    color: #999999;
+    background: #14517f;
+    cursor: auto;
+}
+.pagination li:first-child a {
+    border-left-width: 1px;
+    -webkit-border-radius: 3px 0 0 3px;
+    -moz-border-radius: 3px 0 0 3px;
+    border-radius: 3px 0 0 3px;
+}
+.pagination li:last-child a {
+    -webkit-border-radius: 0 3px 3px 0;
+    -moz-border-radius: 0 3px 3px 0;
+    border-radius: 0 3px 3px 0;
+}
+
+/* ======================== Footer ====================================== */
+footer {
+    min-width: 400px;
+    max-width: 100%;
+    padding-top: 30px;
+    margin: 0 auto;
+    z-index: 0;
+    color: #eee;
+}
+.shoes {
+    max-width: 380px;
+}
+.box1 {
+    float: left;
+    width: 380px;
+    height:130px;
+    text-align: center;
+}
+.social ul {
+    margin: 0;
+    height: 30px;
+}
+.social ul li {
+    float: none;
+    width: 32px;
+    display: inline-block;
+    margin-left: 5px;
+}
+.social img {
+    height:32px;
+    background: #eee;
+    border: 2px solid #eee;
+    border-radius: 32px;
+    /*opacity: 0.7;*/
+    -webkit-transition: all 0.15s ease-in-out;
+    -moz-transition: all 0.15s ease-in-out;
+    -o-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+}
+.social img:hover {
+    background: #9eff9e;
+    border: 2px solid #9eff9e;
+    opacity: 1;
+}
+.copyright {
+    padding: 20px 0;
+    text-align: center;
+    font-weight: normal;
+}
+
+/* =========================== Clearfix ================================== */
+.clear:before,
+.clear:after {
+    content: "";
+    display: table;
+}
+.clear:after {
+    clear: both;
+}
+.clear {
+    zoom: 1;
+}
+
+/* ========================== Accessiblility ============================= */
+
+/* Hide visually and from screen readers:
+ * http://juicystudio.com/article/screen-readers-display-none.php */
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+/* Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+/* Extends the .visuallyhidden class to allow the element to be
+ * focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638 */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+.invisible { /* Hide visually and from screen readers, but maintain layout */
+    visibility: hidden;
+}
+
+/* ======================== Responsive =================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+(-o-min-device-pixel-ratio: 5/4),
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* Print styles. Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/ */
+
+@media print {
+    *, *:before, *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    a, a:visited {
+        text-decoration: underline;
+    }
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /* Don't show links that are fragment identifiers, or use the `javascript:` pseudo protocol */
+    a[href^="#"]:after, a[href^="javascript:"]:after {
+        content: "";
+    }
+    pre, blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /* Printing Tables: http://css-discuss.incutio.com/wiki/Printing_Tables */
+    thead {
+        display: table-header-group;
+    }
+    tr, img {
+        page-break-inside: avoid;
+    }
+    img {
+        max-width: 100% !important;
+    }
+    p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+    }
+    h2, h3 {page-break-after: avoid;}
+}
+/* =================== BrowseHappy ============================ */
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
