@@ -43,20 +43,24 @@
     </header>
     <div class="body-container">
         <div class="row">
-            <article>
-                <h2><a id="2014nov10-android-dev" class="anchor">Android Development: &nbsp;Still in Beta</a></h2>
-                <p> The other day, I came across <a href="http://www.reddit.com/r/Android/comments/2loeph/googles_lack_of_making_it_easy_for_developers_to/">a thread</a> in <a href="https://www.reddit.com/r/android/">/r/Android</a> that continues to bring light on the overall state of the android community. The tl;dr of the post is basically that there are inconsistencies in Google’s own apps in terms of how the material design is implemented. These variations are not noticeable at first from a user perspective, but it does appear to have a significant impact on the developer community.</p>
-                <img class="center" src="../img/blog/android-lollipop-devices.png"/>
-                <h3>Insufficient Source Code</h3>
-                <p> Google went to great lengths with Android 5.0 to setup create material design guidelines for the community to follow, to avoid another situation similar to the sloppy implementation of Holo. On contrary to these efforts, it seems Google is having trouble sticking to the guidelines themselves. Their internal teams are not following <a href="http://en.wikipedia.org/wiki/Don't_repeat_yourself" title="Don't Repeat Yourself Wikipedia page">DRY</a> principles development time across their teams, but also could easily be implemented in the SDK for all other Android developers to use as well. The result is each team is creating their own material design code for parts of the app and inadvertently missing certain guideline leading to the inconsistencies. Since a unified code is not available in the SDK, a third party developer would also have do either spend a disproportionate amount of time to figure out how to create the material components using libraries. Alternatively, developers could resort to finding shared code on github for that have been created by friendly developer. For less technical developers, both would be a challenging task that would require many hours of learning in order to properly replicate a simple design feature, like the floating action button.</p>
-                <h3>Creating Unnecessary Barriers</h3>
-                <p> Many android fans champion that app development for android is superior than iOS due to the customization and implement unique features that are often not possible in the closed down iOS. However, the iOS is often favored for its relative ease, something that is a byproduct of Apple’s philosophy of focusing on the quality and design consistency. I believe this is why most Fortune 500 companies focus their development efforts towards iOS first before accommodating Android. As an android user, I frequently have to wait months for popular iOS apps to be ported over to android, but I understand that time and money often dictate business decision making.</p>
-                <p> For a beginner programmer who is interested dabbling in app development, deciding which mobile operating system to learn first is a challenging task. I have only ever owned Android phones, so naturally there is a tendency to gravitate towards Android. I did start learning some of the basics a couple months ago, but decided to hold off until Android 5.0 was finalized and various resources would be updated accordingly. However, it is becoming harder and harder to ignore the fact that learning iOS first would take less effort than learning android. Compound this with my familiarity with C/C++, adjust to C# will be fairly easy.</p>
-                <h3>Free Sacrifices Quality</h3>
-                <p> Google still has ways to go to improve the developer community. They need to realize the value in placing the same level of importance Apple gives their developers, even if it means charging money to provide dedicated support. Apple charges $99 per year to allow developers to publish their money to provide and offer customer support for resolving any issues, including app rejections and ban resolution. While Google has an advantage in being free to publish apps to the Play Store, that also means that any issues with your apps will have to resolved using third party sources and no direct follow-up support if your app gets banned. Between the two, most developers will agree they would be willing to pay to fund a proper developer support department to avoid the unpleasant outcomes that continue to be a common occurrence.</p>
-                <h6 class="publish-date">Published on November 10, 2014</h6>
-                <h6 class="publish-date">Image: <a href="https://developer.android.com/about/versions/lollipop.html">AOSP</a></h6>
-
+             <article>
+                <h2><a id="2014nov24-filezilla" class="anchor" href="blog-pg3.html#2014nov24-filezilla">Filezilla: &nbsp;An FTP Client for All Platforms</a></h2>
+                <p class="right pad-right-10"><img src="../img/blog/filezilla-logo.png" alt="Filezilla Logo" /></p>
+                <p> Up until the time of this writing, I have been performing a number of time-consuming steps just to copy a file from my mac onto the linux server for testing. The steps are often as follows:</p>
+                <ul class="bullet">
+                    <li>Move/copy file to mac desktop (for easy access)</li>
+                    <li>Open Terminal</li>
+                    <li><i>cd Desktop</i></li>
+                    <li><i>scp file.cpp &lt;username&gt;@bert.cs.uic.edu:file.cpp</i></li>
+                    <li>Enter password</li>
+                </ul>
+                <h3>Searching for Efficient File Transfers</h3>
+                <p> Doing this once is not that big of a deal. The annoyances, however, come when I have to re-upload an updated version of a file, since it require entering a password every single time. I decided to set out onto the interwebs again and find a potential solution. I had already tried experimenting with the saving remote connection in Terminal a few weeks ago, but this only reduces some effort for logging into the server and does not provide shortcuts for transferring files.</p>
+                <img class="center" src="../img/blog/filezilla-client-screenshot.png" alt="Filezilla Client Screenshot"/>
+                <h3>Simple and Powerful</h3>
+                <p> With <a href="https://filezilla-project.org">FileZilla</a>, I now simply have to open the app, autofill the login info, and then drag and drop files wherever I please. The UI is not exactly going to win any design awards, but this is just one of those apps that is made to get the job done. All the information and functionality is displayed in one single window in logically organized subsections. I look forward to using FileZilla and is a must-have program for any developer needing to access remote servers&nbsp;on a regular basis.</p>
+                <h6 class="publish-date">Published on November 24, 2014</h6>
+                <h6 class="publish-date">Image: <a href="https://filezilla-project.org">Filezilla</a></h6>
             </article>
         </div>
         <div class="row">
@@ -102,7 +106,6 @@
                     <li><a href="blog-pg1.html">1</a></li>
                     <li class="active"><a href="blog-pg2.html">2</a></li>
                     <li><a href="blog-pg3.html">3</a></li>
-                    <li><a href="blog-pg4.html">4</a></li>
                     <li><a href="blog-pg3.html">></a></li>
                 </ul>
             </div>
@@ -115,11 +118,10 @@
                 <p>Appreciate my content, have suggestions, or offering professional opportunities? Contact me.</p>
                 <div class="social">
                     <ul>
-                        <li><a href="mailto:revreddy@gmail.com"><img src="../img/social_icons/email_light_32.png"/></a></li>
+                        <li><a href="mailto:revanthreddy1@gmail.com"><img src="../img/social_icons/email_light_32.png"/></a></li>
                         <li><a href="https://www.twitter.com/revreddy"><img src="../img/social_icons/twitter_light_32.png"/></a></li>
                         <li><a href="https://plus.google.com/u/0/+RevanthReddy1/"><img src="../img/social_icons/googleplus_light_32.png"/></a></li>
                         <li><a href="https://www.linkedin.com/in/revanthreddy"><img src="../img/social_icons/linkedin_light_32.png"/></a></li>
-                        <li><a href="https://www.github.com/revreddy"><img src="../img/social_icons/github_dark_32.png"/></a></li>
                     </ul>
                 </div>
                 <h5 class="copyright"> &copy; 2015 Revanth Reddy</h5>
